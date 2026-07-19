@@ -1,19 +1,20 @@
 import React from "react";
 import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
 
 const Navbar = () =>{
     return(
-        <nav className="bg-gray-800 text-white p-40">
+        <nav className="bg-gray-800 text-white p-4">
             <div className="container mx-auto flex justify-between items-center">
-                <Link className="text-xl font-bold">
-                My App
+                <Link href="/" className="text-xl font-bold">
+                    PieChat
                 </Link>
                 <ul className="flex space-x-4">
-                     <li>
-                        <Link href="/" className="hover:text-gray-200">Home</Link>
-                        <Link href="/" className="hover:text-gray-200">About</Link>
-                        <Link href="/" className="hover:text-gray-200">Contact</Link>
-                     </li>
+                     
+                        <li><Link href="/" className="hover:text-gray-200">Home</Link></li>
+                        <li><Link href="/" className="hover:text-gray-200">About</Link></li>
+                        <li><Link href="/" className="hover:text-gray-200">Contact</Link></li>
+                        <li><UserButton></UserButton></li>                    
                 </ul>
             </div>
         </nav>
