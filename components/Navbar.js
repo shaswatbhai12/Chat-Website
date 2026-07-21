@@ -12,8 +12,8 @@ const Navbar = () =>{
                 <ul className="flex space-x-4">
                      
                         <li><Link href="/" className="hover:text-gray-200">Home</Link></li>
-                        <li><Link href="/" className="hover:text-gray-200">About</Link></li>
-                        <li><Link href="/" className="hover:text-gray-200">Contact</Link></li>
+                        <li><Link href="/forum" className="hover:text-gray-200">Forums</Link></li>
+                        <li><Link href="/chat" className="hover:text-gray-200">UserChat</Link></li>
                         <li><UserButton></UserButton></li>                    
                 </ul>
             </div>
