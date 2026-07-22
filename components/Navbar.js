@@ -9,12 +9,12 @@ const Navbar = () =>{
                 <Link href="/" className="text-xl font-bold">
                     PieChat
                 </Link>
-                <ul className="flex space-x-4">
+                <ul className="flex space-x-4 items-center">
                      
                         <li><Link href="/" className="hover:text-gray-200">Home</Link></li>
-                        <li><Link href="/forum" className="hover:text-gray-200">Forums</Link></li>
+                        <li><Link href="/forums" className="hover:text-gray-200">Forums</Link></li>
                         <li><Link href="/chat" className="hover:text-gray-200">UserChat</Link></li>
-                        <li><UserButton></UserButton></li>                    
+                        <li className="flex justify-center items-center"><UserButton/></li>                    
                 </ul>
             </div>
         </nav>

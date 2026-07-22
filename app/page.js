@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Homepage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-[#1e] min-h-screen">
       <section className="bg-cover bg-center bg-no-repeat bg-blue-50">
         <div className="max-w-6xl mx-auto py-24 text-center px-6">
           <h1 className="text-5xl font-bold mb-4">Welcome to PieChat</h1>
