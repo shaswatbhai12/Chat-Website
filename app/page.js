@@ -49,18 +49,18 @@ const Homepage = () => {
       </section>
 
       <section className="max-w-5xl mx-auto px-6 pb-24">
-        <h2 className="text-3xl font-extrabold text-center mb-12 text-slate-900">Pay once, Use forever</h2>
+        <h2 className="text-3xl font-extrabold text-center mb-12 text-slate-900">Pay once, use forever</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           <div className="p-8 bg-white rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
             <div>
             <h3 className="text-lg font-bold text-slate-800 mb-1">Standard</h3>
             <p className="text-xs text-slate-400 mb-6">1 license for only 1 activation</p>
             <div className="flex items-baseline space-x-2 mb-6">
-            <p className="text-slate-400 line-through text-base font-normal">$39</p>
-            <p className="text-4xl font-extrabold text-slate-900">$29</p>
+            <span className="text-slate-400 line-through text-base font-normal">$39</span>
+            <span className="text-4xl font-extrabold text-slate-900">$29</span>
             </div>
             <button className="w-full bg-[#f8fafc] hover:bg-slate-100 text-[#3b82f6] font-semibold py-2.5 rounded-lg border border-slate-200/80 text-sm mb-8 transition">
-              Sign Up
+              Buy Now
             </button>
           </div>
           
@@ -82,7 +82,7 @@ const Homepage = () => {
               <svg className="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span>Use you Own OpenAI Key</span>
+              <span>Use your Own OpenAI Key</span>
             </li>
           </ul>
           </div>
@@ -91,16 +91,16 @@ const Homepage = () => {
             <div>
               <div className="flex justify-between items-center mb-1">
             <h3 className="text-lg font-bold text-[#3b82f6]">Extended</h3>
-            <span className="bg-blue-50 text-blue-600 text-[11px] font-medium px-2.5 py-0 5 rounded-full">
+            <span className="bg-blue-50 text-blue-600 text-[11px] font-medium px-2.5 py-0.5 rounded-full">
               Most Popular
             </span>
             </div>
             <p className="text-xs text-slate-400 mb-6">1 license for up to 3 activations</p>
-            <div className="flex items-baseline justify-center space-x-2 mb-6">
+            <div className="flex items-baseline space-x-2 mb-6">
               <span className="text-slate-400 line-through text-base font-normal">$59</span>
               <span className="text-4xl font-extrabold text-slate-900">$39</span>
             </div>
-            <button className="w-full bg-[#2563eb] hover:bg-blue-600 text-white font-semibold py-2.5 shadow-sm mt-8 transition rounded-lg">
+            <button className="w-full bg-[#2563eb] hover:bg-blue-600 text-white font-semibold py-2.5 rounded-lg text-sm mb-8 transition">
               Buy Now
             </button>
           </div>
@@ -131,15 +131,35 @@ const Homepage = () => {
             <h3 className="text-lg font-bold text-slate-900 mb-1">Premium</h3>
             <p className="text-xs text-slate-400 mb-6">1 license for only 1 activation</p>
 
-            <div className="flex items-baseline justify-center space-x-2 mb-6">
+            <div className="flex items-baseline space-x-2 mb-6">
               <span className="text-slate-400 line-through text-base font-normal">$39</span>
-              <span className="text-46 font-extrabold text-slate-900">$29</span>
-
+              <span className="text-4xl font-extrabold text-slate-900">$29</span>
             </div>
-            <button className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 mt-4 rounded-md">
-              Learn More
+            <button className="w-full bg-[#f8fafc] hover:bg-slate-100 text-[#3b82f6] font-semibold py-2.5 border border-slate-800/20 text-sm mb-8 transition rounded-lg">
+              Buy Now
             </button>
           </div>
+          <ul className="space-y-3 text-xs text-slate-600">
+            <li className="flex items-center space-x-2.5">
+              <svg className="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Lifetime Access</span>
+            </li>
+            <li className="flex items-center space-x-2.5">
+              <svg className="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>All AI Features</span>
+            </li>
+            <li className="flex items-center space-x-2.5">
+              <svg className="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Use your own OpenAI Key</span>
+            </li>
+          </ul>
+        </div>
         </div>
       </section>
     </div>
