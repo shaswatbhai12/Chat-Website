@@ -1,31 +1,39 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 const topics = [
     {
     text: "Python",
     img: "/python.svg",
-    desc: "Let's Discuss everything related to Python"
+    desc: "Let's Discuss everything related to Python",
+    slug: "python-discuss"
     },
     {
     text: "Javascript",
     img: "/javascript.png",
-    desc: "Learn and share JavaScript Knowledge"
+    desc: "Learn and share JavaScript Knowledge",
+    slug: "js-discuss"
+
     },
     {
     text: "React",
     img: "/react.png",
-    desc: "Build amazing User Interface with react"
+    desc: "Build amazing User Interface with react",
+    slug: "react-discuss"
     },
     {
     text: "CSS",
     img: "/css.png",
-    desc: "Explore the word of designing and CSS"
+    desc: "Explore the word of designing and CSS",
+    slug: "css-discuss"
     },
     {
     text: "Web Development",
     img: "/html.png",
-    desc: "Discuss Front end, Back-end, and full stack web development"
+    desc: "Discuss Front end, Back-end, and full stack web development",
+    slug: "web-discuss"
     },
 ]
 
@@ -40,7 +48,9 @@ const Forums = () => {
                         <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-sm mb-4"><Image src={topic.img} width={64} height={64} alt={topic.text} className="object-contain w-full h-full"/></div>
                         <div className="mb-6"><h2 className="text-xl font-bold text-slate-900 mb-2">{topic.text}</h2>
                         <p className="text-slate-600 text-xs md:text-sm max-w-xs leading-relaxed">{topic.desc}</p></div>
-                        <button className="bg-slate-100/80 hover:bg-slate-200/80 text-slate-800 text-xs font-medium py-2 px-5 rounded-md border border-slate-300/60 transition duration-200">Discuss now</button>
+                        <Link href={`/forum/${topic.slug}`}>
+                        <Button className="bg-slate-100/80 hover:bg-slate-200/80 text-slate-800 text-xs font-medium py-2 px-5 rounded-md border border-slate-300/60 transition duration-200">Discuss now</Button>
+                        </Link>
                         </div>
                 })}
             </div>
