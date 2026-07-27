@@ -8,32 +8,32 @@ const topics = [
     text: "Python",
     img: "/python.svg",
     desc: "Let's Discuss everything related to Python",
-    slug: "python-discuss"
+    slug: "python"
     },
     {
     text: "Javascript",
     img: "/javascript.png",
     desc: "Learn and share JavaScript Knowledge",
-    slug: "js-discuss"
+    slug: "javascript"
 
     },
     {
     text: "React",
     img: "/react.png",
     desc: "Build amazing User Interface with react",
-    slug: "react-discuss"
+    slug: "react"
     },
     {
     text: "CSS",
     img: "/css.png",
     desc: "Explore the word of designing and CSS",
-    slug: "css-discuss"
+    slug: "css"
     },
     {
     text: "Web Development",
     img: "/html.png",
     desc: "Discuss Front end, Back-end, and full stack web development",
-    slug: "web-discuss"
+    slug: "web"
     },
 ]
 

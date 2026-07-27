@@ -7,7 +7,7 @@ import 'stream-chat-react/dist/css/index.css'
 const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY
 const userId = 'user_3GiolntMrE3jGanR1i5PcaFJQb7'
 const userName = 'Shaswat'
-const userToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoic3BhcmtsaW5nLXBpbmUtOCIsImV4cCI6MTc4NTE3NjM2N30.cMySICPJhLJqks6h3XFyU0oLOrboDexk798w3WGGeEQ'
+const userToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlcl8zR2lvbG50TXJFM2pHYW5SMWk1UGNhRkpRYjcifQ.jguhPLX1m5FRA0d2ngjWLSgqMMvliQ6H3LsZNItG_78'
 
 const user = {
     id: userId,
@@ -15,7 +15,14 @@ const user = {
     image: `https://getstream.io/random_png/?name=${userName}`
 }
 
-export default function ChatForum( ) {
+export default function ChatForum({slug}) {
+    function toTitleCase(str) {
+        return str.replace(
+            /\b[a-z]/g,
+            (char) => char.toUpperCase()
+        )
+    }
+
     const [channel, setChannel] = useState()
     const client = useCreateChatClient({
         apiKey,
@@ -26,9 +33,9 @@ export default function ChatForum( ) {
     useEffect(()=>{
         if(!client) return
         
-        const channel = client.channel('messaging', 'custom_channel_id', {
+        const channel = client.channel('messaging', slug, {
             image: 'https://getstream.io/random_png/?name=react',
-            name: 'Talk about React',
+            name: toTitleCase(slug.replace(/-/g, "")) + 'Discussion ',
             members: [userId]
         });
 
