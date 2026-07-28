@@ -1,38 +1,20 @@
-"use client"
-import { useState, useEffect } from 'react';
-import { Chat, useCreateChatClient, Channel, ChannelHeader, MessageComposer, MessageList, Thread, Window } from 'stream-chat-react'
-import { useUser } from '@clerk/nextjs';
+import React from 'react'
+import { useState, useEffect } from 'react'
+import { useCreateChatClient, Chat, Channel, ChannelHeader, MessageComposer, MessageList, Thread, Window } from 'stream-chat-react'
+
 import 'stream-chat-react/dist/css/index.css'
 
-const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY
-// const userId = 'user_3GiolntMrE3jGanR1i5PcaFJQb7'
-// const userName = 'Shaswat'
-const userToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlcl8zR2lvbG50TXJFM2pHYW5SMWk1UGNhRkpRYjcifQ.jguhPLX1m5FRA0d2ngjWLSgqMMvliQ6H3LsZNItG_78'
-
-
-export default function ChatForum({slug}) {
-    const { isLoaded, clerkUser }  = useUser()
-    const [user, setuser] = useState(second)
-
-    useEffect(()=>{
-        const userId = clerkUser?.id
-        const userName = clerkUser?.firstName;
-        if (isLoaded) {
-            const user = {
-                id: userId,
-                name: userName,
-                image: `https://getstream.io/random_png/?name=${userName}`
-            };
-            setuser(user)
-        }
-    }, [isLoaded])
-    function toTitleCase(str) {
-        return str.replace(
-            /\b[a-z]/g,
-            (char) => char.toUpperCase()
-        )
-    }
-
+const ChatForum = ({ clerkUser, slug }) => {
+    const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY
+    const userId = clerkUser.id
+    const userName = clerkUser.name
+    const userToken = clerkUser.token       
+    
+    const user = {
+        id: userId,
+        name: userName,
+        image: `https://getstream.io/random_png/name=${userName}`
+    };
     const [channel, setChannel] = useState()
     const client = useCreateChatClient({
         apiKey,
@@ -42,28 +24,12 @@ export default function ChatForum({slug}) {
 
     useEffect(()=>{
         if(!client) return
-        
-        const channel = client.channel('messaging', slug, {
-            image: 'https://getstream.io/random_png/?name=react',
-            name: toTitleCase(slug.replace(/-/g, "")) + 'Discussion ',
-            members: [userId]
-        });
-
-        setChannel(channel);
-    }, [client]);
-
-    if(!client) return <div>Setting up Client and Connection...</div>;
-
-    return(
-        <Chat client={client}>
-            <Channel channel={channel}>
-                <Window>
-                    <ChannelHeader/>
-                    <MessageList/>
-                    <MessageComposer/>
-                </Window>
-                <Thread/>
-            </Channel>
-        </Chat>
-    )
+    })
+return (
+    <div>
+      
+    </div>
+  )
 }
+
+export default ChatForum
