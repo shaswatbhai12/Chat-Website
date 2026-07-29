@@ -17,7 +17,7 @@ const Navbar = () =>{
                      
                         <li><Link href="/" className="hover:text-gray-200">Home</Link></li>
                         <li><Link href="/forums" className="hover:text-gray-200">Forums</Link></li>
-                        <li><Link href={user ? `chat/${user?.id}` : "/sign-in"} className="hover:text-gray-200">UserChat</Link></li>
+                        <li><Link href="/chat" className="hover:text-gray-200">UserChat</Link></li>
                         <li className="flex justify-center items-center"><UserButton/></li>                    
                 </ul>
             </div>
