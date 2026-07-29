@@ -2,10 +2,10 @@
 import React from "react";
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
-// import { useUser } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 
 const Navbar = () =>{
-    // const user = useUser()
+    const { user } = useUser()
     // console.log(user.user?.id)
     return(
         <nav className="bg-gray-800 text-white p-4">
@@ -17,7 +17,7 @@ const Navbar = () =>{
                      
                         <li><Link href="/" className="hover:text-gray-200">Home</Link></li>
                         <li><Link href="/forums" className="hover:text-gray-200">Forums</Link></li>
-                        <li><Link href="/chat" className="hover:text-gray-200">UserChat</Link></li>
+                        <li><Link href={user ? `chat/${user?.id}` : "/sign-in"} className="hover:text-gray-200">UserChat</Link></li>
                         <li className="flex justify-center items-center"><UserButton/></li>                    
                 </ul>
             </div>
