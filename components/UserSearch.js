@@ -27,16 +27,18 @@ export default function UserChat() {
     };
 
     return(
-        <div className="w-96">
-            <input value={query} className="border p-3 rounded w-full" placeholder="Search Users ..." onChange={(e)=>searchUsers(e.target.value)}/>
+        // <div className="w-96">
+        //     <input value={query} className="border p-3 rounded w-full" placeholder="Search Users ..." onChange={(e)=>searchUsers(e.target.value)}/>
 
-            <div className="mt-3">
-                {
-                    users.map((user)=>(
-                        <div className="p-3 border cursor-pointer hover:bg-gray-100" key={user.id} onClick={()=>{router.push(`/chat/${user.id}`)}}>{user.name}</div>
-                    ))
-                }
-            </div>
-        </div>
+        //     <div className="mt-3">
+        //         {
+        //             users.map((user)=>(
+        //                 <div className="p-3 border cursor-pointer hover:bg-gray-100" key={user.id} onClick={()=>{router.push(`/chat/${user.id}`)}}>{user.name}</div>
+        //             ))
+                
+        //     </div>
+        // </div>
+
+        <h1 className="text-center ">Under Development</h1>
     )
 }

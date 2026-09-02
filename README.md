@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# A web-based **Chat application** built to let connect user, in forum & directly connect with them(under development)
 
-## Getting Started
+# Features
+ -**Real-Time Messenging** - Instant 2 way coommunication**Under Development**
 
-First, run the development server:
+ -**Channels**-Dedicted Channals to discuss
+ 
+# Tech Stacks
+ -**Frontend*** - Next.js
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+ -**Backend** - Node js
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ -**API** - Stream API
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+ -**Authentication** - Clerk
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# What I Learnt
+ I learnt how to authenticate Users with Clerk and also learnt how to get chat between users using stream API
 
-## Learn More
+# Most Challenging Part
+ The most challenging part of the project is that when i have to make the direct chat between users
 
-To learn more about Next.js, take a look at the following resources:
+# How to Run It & Live Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ Live Link: [Chat App](https://piechat-1.vercel.app/chat)
+ Github Clone: [Clone](https://github.com/shaswatbhai12/Chat-Website.git)

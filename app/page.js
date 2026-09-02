@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"
 
 const Homepage = () => {
   return (
@@ -9,9 +10,9 @@ const Homepage = () => {
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">PieChat - Chat with your friends and more</h1>
           <p className="text-slate-400 text-sm md:text-base mb-8 leading-relaxed max-w-lg">Welcome to Piechat, the fun and easy way to connect with your friends and family. Stay in touch, share stories and laugh, and lasting memories - all in one place</p>
           <div className="flex flex-wrap gap-4">
-          <button className="border border-slate-600 hover:border-slate-400 text-slate-200 text-sm font-medium py-2.5 px-4 rounded-md transition">
+          <Link href="https://github.com/shaswatbhai12/Chat-Website"><button className="border border-slate-600 hover:border-slate-400 text-slate-200 text-sm font-medium py-2.5 px-4 rounded-md transition">
             View on Github
-          </button>
+          </button></Link>
           <button className="bg-[#2563eb] hover:bg-blue-600 text-white text-sm font-medium py-2.5 px-4 rounded-md transition">
             Start Chatting
           </button>
